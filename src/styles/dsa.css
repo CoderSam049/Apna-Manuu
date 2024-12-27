@@ -1,0 +1,107 @@
+.dsa-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dsa-heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .dsa-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .dsa-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: white;
+  }
+  
+  .dsa-table th,
+  .dsa-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .dsa-table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .dsa-table td a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .dsa-table td a:hover {
+    text-decoration: underline;
+  }
+  
+  .difficulty-easy {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .difficulty-medium {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .difficulty-hard {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dsa-table th,
+    .dsa-table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .dsa-heading {
+      font-size: 18px;
+    }
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-button {
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-button.active,
+  .filter-button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .dsa-table td a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .dsa-table td a:hover {
+    text-decoration: underline;
+  }
+  

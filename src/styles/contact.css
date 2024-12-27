@@ -1,0 +1,117 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.contact-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.divider {
+    margin: 20px 0;
+    border: 1px solid #eee;
+}
+
+
+
+
+.form-input:focus {
+    border-color: #007bff;
+}
+
+
+
+
+
+.address-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.address-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.address-info {
+    font-size: 1.1rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+.map-frame {
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+
+.google-form-heading {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333; text-align: center;
+}
+
+.studentForm{
+   
+        max-width: 600px;
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fffeffad;
+     
+}
+
+.studentForm  input, select,textarea{
+  width: 100%;
+   margin-bottom:10px;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+.studentForm input, select,textarea:focus{
+    outline: 1px solid rgb(52, 121, 160);
+    border: none;
+  
+}
+.studentForm input{
+    margin-top: 1rem;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 15px;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .address-heading {
+        font-size: 1.8rem;
+    }
+
+}
+

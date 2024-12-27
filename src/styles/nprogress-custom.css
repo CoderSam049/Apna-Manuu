@@ -1,0 +1,41 @@
+/* Customize the progress bar color and height */
+#nprogress .bar {
+  background: #ff5733; /* Your custom color */
+  height: 4px; /* Adjust the thickness of the bar */
+}
+
+/* Customize the background color of the progress bar shadow */
+#nprogress .peg {
+  box-shadow: 0 0 10px #ff5733, 0 0 5px #ff5733;
+}
+
+/* Customize the spinner, if enabled */
+#nprogress .spinner {
+  display: none; /* Hides the spinner, as per configuration */
+}
+
+/* If you decide to enable the spinner */
+#nprogress .spinner-icon {
+  border-top-color: #ff5733;
+  border-left-color: #ff5733;
+}
+
+
+#nprogress .bar {
+  background: linear-gradient(90deg, #4caf50, #2196f3);
+}
+
+#nprogress .bar {
+  animation: glowing 1.5s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0% { background-color: #ff5733; }
+  50% { background-color: #ff9b33; }
+  100% { background-color: #ff5733; }
+}
+
+#nprogress .bar {
+  animation: glowing 1.5s ease-in-out infinite;
+}
+

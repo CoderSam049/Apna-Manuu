@@ -1,0 +1,58 @@
+.testpage {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Arial, sans-serif';
+   
+  }
+.heading{
+   font-size: 3rem;
+   background-color: #5753cc;
+  }
+  
+  .subject-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .subject-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .subject-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .subject-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .subject-button {
+    padding: 10px 20px;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subject-button:hover {
+    background-color: #5753cc;
+  }
+  
+  .subject-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
