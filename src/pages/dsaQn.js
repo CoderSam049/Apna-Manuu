@@ -103,6 +103,12 @@ const questions = [
         type: "Array",
     },
     {
+        name: "Merge Sorted Array",
+        link: "https://leetcode.com/problems/merge-sorted-array/",
+        difficulty: "Easy",
+        type: "Array",
+    },
+    {
         name: "Contains Duplicate",
         link: "https://leetcode.com/problems/contains-duplicate/",
         difficulty: "Easy",
