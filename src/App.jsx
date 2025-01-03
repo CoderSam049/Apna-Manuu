@@ -32,7 +32,9 @@ function App() {
         <div className='mainSec'>
         <ProgressBar />
           <Header />
-          <Outlet />
+          <div className="body-sec">
+            <Outlet />
+          </div>
           </div>
           <Footer />
         </>

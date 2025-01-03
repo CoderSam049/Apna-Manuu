@@ -34,6 +34,13 @@ header {
     top: 0px;
 }
 
+
+
+
+main{
+    max-width: 1600px;
+    margin-inline: auto;
+}
 .first {
     color: rgba(12, 255, 255, 0.921);
     font-size: 20px;
@@ -79,14 +86,13 @@ a:hover {
 .firstimg {
     border: 1px solid black;
     text-align: center;
-    min-height: 60vh;
-    /* width:60%; */
+    min-height:70vh;
     justify-content: center;
-    margin: 70px auto;
+    margin: 60px auto;
     background-image: url(../../public/assets/home-img/studeyboy.jpg);
     background-size: cover;
-    background-position: center center;
     border-radius: 10px;
+    object-fit: contain;
     max-width: 750px;
 
 }

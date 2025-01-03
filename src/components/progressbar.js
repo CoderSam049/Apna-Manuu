@@ -13,7 +13,7 @@ const ProgressBar = () => {
     NProgress.start();
     const timer = setTimeout(() => {
       NProgress.done();
-    }, 500);
+    }, 1200);
 
     return () => {
       clearTimeout(timer);
