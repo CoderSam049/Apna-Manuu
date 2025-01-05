@@ -12,7 +12,7 @@ export default function Footer() {
               <span>💫</span>APNA MANUU
             </h2>
             <p>
-              Maluna Azad National Urdu University
+            Maulana Azad National Urdu University
               <br />
               hyderabad
             </p>
