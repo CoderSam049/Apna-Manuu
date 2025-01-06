@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import dropDownImg from "../../public/assets/other/dropdown.png";
-import dropDownSvg from "../../public/assets/other/arrow-drop-up-line.svg";
+import dropDownSvg from "../../public/assets/other/arrow-drop-up-line.svg"; // Adjust the path as needed
 import "../styles/header.css";
 
-
-
-export default function Header() {
+const Header = () => {
   const [navList, setNavList] = useState(false);
   const [dropDown, setDropDown] = useState(false);
 
@@ -17,20 +14,22 @@ export default function Header() {
   };
 
   // Toggle the dropdown menu
-  const toggleDropDown = (e) => {
-    e.stopPropagation();
-    setDropDown((prev) => !prev);
+  const toggleDropDown = () => {
+    setDropDown(!dropDown);
   };
 
   // Close menus when clicking outside
-  useEffect(() => {
-    const closeMenus = () => {
-      setNavList(false);
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.explore-sec')) {
       setDropDown(false);
-    };
+    }
+  };
 
-    document.addEventListener("click", closeMenus);
-    return () => document.removeEventListener("click", closeMenus);
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
   }, []);
 
   return (
@@ -82,4 +81,6 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
