@@ -4,36 +4,51 @@ import machinelearning from "../../public/assets/home-img/machine.png";
 import ai from "../../public/assets/home-img/a1.png";
 import appdev from "../../public/assets/home-img/appdev.png";
 
-
-
-import  developer from "../../public/gif/developer.png";
+import developer from "../../public/gif/developer.png";
 import mobileDev from "../../public/gif/mobileDev.gif";
 import webdev from "../../public/gif/webdevlopment.gif";
-
-
-
-
-
-
-
+import wave from '../../public/assets/other/wave.svg'
 
 export default function Home() {
   return (
     <>
-      {" "}
-      <div className="firstimg"></div>
-      <div className="h-line">
-     
+   <div className="hero">
+ 
+
+  {/* Hero Content */}
+  <div className="hero-content">
+    {/* Hero Text */}
+    <div className="hero-text">
+      <h1 className="desc">Unlock Your Learning Potential</h1>
+      <p>
+        We bring your ideas to life with cutting-edge technology and design.
+        Let's build something amazing together.
+      </p>
+      <div className="hero-buttons">
+        <a href="#learn-more" className="btn primary">Learn More</a>
+        <a href="#get-start" className="btn secondary">Get Started</a>
+      </div>
+      
+    </div>
+    
+
+    {/* Hero Image */}
+    <div className="hero-image">
+      <img
+        src="https://raw.githubusercontent.com/CoderSam049/notes/main/uploads/student%20with%20study.jpg"
+        alt="Hero Image"
+      />
+    </div>
   </div>
+
+</div>
+       <img className="svg-wave" src={wave} alt="wave" />
+      <div className="h-line"></div>
       <main>
         <div className="secondpart">
-          <marquee behavior="scroll" direction="left" scrollamount="10">
-            <h1 className="webname">
-              Welcome to  MANUU Polytechnic Darbhanga 
-            </h1>
-          </marquee>
+        
 
-          <section className="part-2">
+          <section id="get-start" className="part-2">
             <div className="two">
               <div className="ourteam left">
                 <h1>Learn, Teach, Grow, Collaborate 👏</h1>
@@ -46,8 +61,7 @@ export default function Home() {
                   technology. Join us to innovate, learn, and grow together.
                 </p>
 
-                <button style={{background:"black", color:"white"}}>Get Started</button>
-                <button>Learn More..</button>
+      
               </div>
               <div className="right">
                 <img src={developer} alt="developer" />
@@ -122,37 +136,60 @@ export default function Home() {
             tracking and assessment tools to monitor learning outcomes and
             measure academic growth.
           </p>
-          
         </div>
         <div className="lining-svg">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffa300" fill-opacity="1" d="M0,160L0,256L68.6,256L68.6,64L137.1,64L137.1,192L205.7,192L205.7,192L274.3,192L274.3,192L342.9,192L342.9,96L411.4,96L411.4,0L480,0L480,160L548.6,160L548.6,192L617.1,192L617.1,288L685.7,288L685.7,96L754.3,96L754.3,288L822.9,288L822.9,288L891.4,288L891.4,160L960,160L960,224L1028.6,224L1028.6,224L1097.1,224L1097.1,256L1165.7,256L1165.7,128L1234.3,128L1234.3,0L1302.9,0L1302.9,288L1371.4,288L1371.4,224L1440,224L1440,320L1371.4,320L1371.4,320L1302.9,320L1302.9,320L1234.3,320L1234.3,320L1165.7,320L1165.7,320L1097.1,320L1097.1,320L1028.6,320L1028.6,320L960,320L960,320L891.4,320L891.4,320L822.9,320L822.9,320L754.3,320L754.3,320L685.7,320L685.7,320L617.1,320L617.1,320L548.6,320L548.6,320L480,320L480,320L411.4,320L411.4,320L342.9,320L342.9,320L274.3,320L274.3,320L205.7,320L205.7,320L137.1,320L137.1,320L68.6,320L68.6,320L0,320L0,320Z"></path></svg>
-
-      </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#ffa300"
+              fill-opacity="1"
+              d="M0,160L0,256L68.6,256L68.6,64L137.1,64L137.1,192L205.7,192L205.7,192L274.3,192L274.3,192L342.9,192L342.9,96L411.4,96L411.4,0L480,0L480,160L548.6,160L548.6,192L617.1,192L617.1,288L685.7,288L685.7,96L754.3,96L754.3,288L822.9,288L822.9,288L891.4,288L891.4,160L960,160L960,224L1028.6,224L1028.6,224L1097.1,224L1097.1,256L1165.7,256L1165.7,128L1234.3,128L1234.3,0L1302.9,0L1302.9,288L1371.4,288L1371.4,224L1440,224L1440,320L1371.4,320L1371.4,320L1302.9,320L1302.9,320L1234.3,320L1234.3,320L1165.7,320L1165.7,320L1097.1,320L1097.1,320L1028.6,320L1028.6,320L960,320L960,320L891.4,320L891.4,320L822.9,320L822.9,320L754.3,320L754.3,320L685.7,320L685.7,320L617.1,320L617.1,320L548.6,320L548.6,320L480,320L480,320L411.4,320L411.4,320L342.9,320L342.9,320L274.3,320L274.3,320L205.7,320L205.7,320L137.1,320L137.1,320L68.6,320L68.6,320L0,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
         <br />
         <br />
-     
-       
-  <section className="features">
-  <div className="section">
-    <div className="content">
-      <h2>Web Development</h2>
-      <p>Join us to embark on your web development journey and become part of a network committed to your growth and success. Web development involves building and maintaining websites and web applications, utilizing languages like HTML, CSS, and JavaScript, along with frameworks like React, Angular, and Vue.js for frontend development, as well as Node.js and Django for backend development. Additionally, we offer support in learning database technologies to become proficient in full-stack web development.</p>
-    </div>
-    <div className="image">
-      <img src= {webdev} alt="mobile Development Illustration"/>
-    </div>
-  </div>
 
-  <div className="section">
-    <div className="image">
-    <img src={mobileDev} alt="webDev" />
-    </div>
-    <div className="content">
-      <h2>Android Development</h2>
-      <p>GeekHub welcomes you to the vibrant world of Android Development, where innovation meets opportunity. Join our dynamic community to embark on a journey of app creation and mastery. Delve into the realms of Java/Kotlin, Android Studio, and cutting-edge frameworks like Flutter. From crafting captivating UI/UX experiences to seamless backend integration, GeekHub empowers you to turn your ideas into reality. Connect, collaborate, and chart your path to success with GeekHub - where creativity knows no bounds.</p>
-    </div>
-  </div>
-  </section>
+        <section id="learn-more"  className="features">
+          <div className="section">
+            <div className="content" >
+              <h2>Web Development</h2>
+              <p>
+                Join us to embark on your web development journey and become
+                part of a network committed to your growth and success. Web
+                development involves building and maintaining websites and web
+                applications, utilizing languages like HTML, CSS, and
+                JavaScript, along with frameworks like React, Angular, and
+                Vue.js for frontend development, as well as Node.js and Django
+                for backend development. Additionally, we offer support in
+                learning database technologies to become proficient in
+                full-stack web development.
+              </p>
+            </div>
+            <div className="image">
+              <img src={webdev} alt="mobile Development Illustration" />
+            </div>
+          </div>
+
+          <div className="section">
+            <div className="image">
+              <img src={mobileDev} alt="webDev" />
+            </div>
+            <div className="content">
+              <h2>Android Development</h2>
+              <p>
+                GeekHub welcomes you to the vibrant world of Android
+                Development, where innovation meets opportunity. Join our
+                dynamic community to embark on a journey of app creation and
+                mastery. Delve into the realms of Java/Kotlin, Android Studio,
+                and cutting-edge frameworks like Flutter. From crafting
+                captivating UI/UX experiences to seamless backend integration,
+                GeekHub empowers you to turn your ideas into reality. Connect,
+                collaborate, and chart your path to success with GeekHub - where
+                creativity knows no bounds.
+              </p>
+            </div>
+          </div>
+        </section>
         <section id="feature">
           <div className="features-Images-div">
             <div className="text1 text-size">
@@ -250,7 +287,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
       </main>
     </>
   );

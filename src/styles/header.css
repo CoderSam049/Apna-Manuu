@@ -24,6 +24,13 @@
     
     
 }
+
+.nav-list .active {
+    color: rgb(127, 230, 0); 
+    
+  }
+
+
 nav .course li+li{
 margin-top: 1rem;
 }
