@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import dropDownSvg from "../../public/assets/other/arrow-drop-up-line.svg"; // 
 import "../styles/header.css";
 import { NavLink } from 'react-router-dom';
-
+import logo from "../../public/assets/home-img/logoapnamanuu.png";
 
 const Header = () => {
   const [navList, setNavList] = useState(false);
@@ -32,7 +32,20 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <div className="brand">Apna MANUU &hearts;</div>
+      <NavLink 
+            to="/" 
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+         
+          >
+            <img 
+              src={logo} 
+              alt="MANUU Logo" 
+              className="h-12 w-12 object-contain"
+            />
+            <span className="text-xl font-semibold ">
+              Apna MANUU <span className="text-red-500">♥</span>
+            </span>
+          </NavLink>
 
         {/* Toggle button for mobile menu */}
         <div onClick={toggleNavList} className="menu-toggle" id="mobile-menu">
