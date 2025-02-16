@@ -17,12 +17,17 @@
     max-width: 220px;
     flex-direction: column;
     padding: 20px 0px;
+    transition: 0.5s linear;
     top: 40px;
     left: 65px;
     background-color: rgb(34, 34, 42);
     border-radius: 14px;
     
     
+}
+
+.activeExplore{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .nav-list .active {

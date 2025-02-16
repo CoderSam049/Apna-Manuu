@@ -13,6 +13,8 @@ import NotesPage from './pages/NotesPage';
 import Signin from './pages/Signin';
 import REactPage from './pages/REactPage';
 import DSASection from './pages/DsaSheet';
+import Development from './pages/Development';
+import Resources from './pages/Rosourse';
 
 
 const router = createBrowserRouter([
@@ -64,6 +66,14 @@ const router = createBrowserRouter([
       {
         path: '/dsaSheet',
         element: <DSASection/>
+      },
+      {
+        path: '/development',
+        element: <Development/>
+      },
+      {
+        path: '/resources',
+        element: < Resources/>
       },
     ],
   },
