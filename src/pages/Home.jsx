@@ -153,6 +153,16 @@ export default function Home() {
 
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+              {/* AI Feature */}
+  <motion.div 
+    className="feature-card"
+    whileHover={{ scale: 1.05 }}
+  >
+    <img src={development} alt="AI" className="feature-img" />
+    <h1>Web Development</h1>
+    <p>Web development involves creating, building, and maintaining websites and web applications.</p>
+  </motion.div>
   
   {/* Python Feature */}
   <motion.div 
@@ -160,7 +170,7 @@ export default function Home() {
     whileHover={{ scale: 1.05 }}
   >
     <img src={pythonImg} alt="Python" className="feature-img" />
-    <h2>Python</h2>
+    <h1>Python</h1>
     <p>Python is a high-level, easy-to-learn programming language with simple syntax...</p>
   </motion.div>
 
@@ -170,8 +180,17 @@ export default function Home() {
     whileHover={{ scale: 1.05 }}
   >
     <img src={machinelearning} alt="Machine Learning" className="feature-img" />
-    <h2>Machine Learning</h2>
+    <h1>Machine Learning</h1>
     <p>Machine Learning enables AI systems to improve performance automatically...</p>
+  </motion.div>
+
+  <motion.div 
+    className="feature-card"
+    whileHover={{ scale: 1.05 }}
+  >
+    <img src={mobileDev} alt="Machine Learning" className="feature-img" />
+    <h1>App development</h1>
+    <p>App development is the process of creating software applications that run on mobile devices, such as smartphones and tablets, or on desktop computers</p>
   </motion.div>
 
   {/* AI Feature */}
@@ -180,9 +199,11 @@ export default function Home() {
     whileHover={{ scale: 1.05 }}
   >
     <img src={ai} alt="AI" className="feature-img" />
-    <h2>Artificial Intelligence</h2>
+    <h1>Artificial Intelligence</h1>
     <p>AI enhances automation, personalization, and predictive analytics...</p>
   </motion.div>
+
+
 
 </div>
 
