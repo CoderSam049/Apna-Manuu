@@ -8,6 +8,7 @@ import logo from "../../public/assets/home-img/logoapnamanuu.png";
 const Header = () => {
   const [navList, setNavList] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+
   const location = useLocation(); // Current location track karne ke liye
 
   // Navigation change hone par menu aur dropdown close + page scroll to top
@@ -23,9 +24,18 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <NavLink to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-          <img src={logo} alt="MANUU Logo" className="h-12 w-12 object-contain" />
-          <span className="text-xl font-semibold">Apna MANUU <span className="text-red-500">♥</span></span>
+        <NavLink
+          to="/"
+          className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+        >
+          <img
+            src={logo}
+            alt="MANUU Logo"
+            className="h-12 w-12 object-contain"
+          />
+          <span className="text-xl font-semibold">
+            Apna MANUU <span className="text-red-500">♥</span>
+          </span>
         </NavLink>
 
         {/* Toggle button for mobile menu */}
@@ -35,10 +45,20 @@ const Header = () => {
 
         {/* Navigation list */}
         <ul className={`nav-list ${navList ? "show" : ""}`}>
-          <li><NavLink exact to="/">Home</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+          <li>
+            <NavLink exact to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
 
-          <li className="explore-sec">
+          <li
+            className="explore-sec"
+            onMouseEnter={() => toggleDropDown()}
+            onMouseLeave={() => toggleDropDown()}
+          >
             <div className="dropDown" onClick={toggleDropDown}>
               <NavLink to="/test">Explore</NavLink>
               <img className="dropDownImg" src={dropDownSvg} alt="dropDown" />
@@ -47,18 +67,42 @@ const Header = () => {
             {/* Animated Dropdown Menu */}
             <AnimatePresence>
               {dropDown && (
-                <motion.ul initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ duration: 0.2, ease: "easeOut" }} className="course">
-                  <li><NavLink to="/dsaSheet">DSA Sheet</NavLink></li>
-                  <li><NavLink to="/test">Core Subject</NavLink></li>
-                  <li><NavLink to="/development">Development</NavLink></li>
-                  <li><NavLink to="/resources">Resources</NavLink></li>
+                <motion.ul
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="course"
+                >
+                  <li>
+                    <NavLink to="/dsaSheet">DSA Sheet</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/test">Core Subject</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/development">Development</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/resources">Resources</NavLink>
+                  </li>
                 </motion.ul>
               )}
             </AnimatePresence>
           </li>
 
-          <li><NavLink to="/notes">Notes</NavLink></li>
-          <li><a href="https://manuu.edu.in/" target="_blank" rel="noopener noreferrer">Notification</a></li>
+          <li>
+            <NavLink to="/notes">Notes</NavLink>
+          </li>
+          <li>
+            <a
+              href="https://manuu.edu.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Notification
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
