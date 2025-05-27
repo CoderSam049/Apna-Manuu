@@ -2,6 +2,21 @@ import { motion } from "framer-motion";
 import notesData from "./notesData";
 
 const NotesPage = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    show: { y: 0, opacity: 1 },
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 text-white px-6 py-16">
       {/* Animated Heading */}
@@ -17,16 +32,29 @@ const NotesPage = () => {
       </motion.h1>
 
       {/* Notes Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+      >
         {notesData.map((note, index) => (
           <motion.div
             key={index}
-            className="relative bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out overflow-hidden group"
-            whileHover={{ scale: 1.05 }}
+            variants={item}
+            className="relative bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out overflow-hidden group backdrop-blur-sm bg-opacity-80"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 20px 30px rgba(0,0,0,0.3)",
+            }}
+            whileTap={{ scale: 0.95 }}
           >
             <div className="p-6">
-              {/* Image */}
-              <div className="relative h-40 flex items-center justify-center bg-gray-700 rounded-lg">
+              {/* Image with enhanced hover effect */}
+              <motion.div
+                className="relative h-40 flex items-center justify-center bg-gray-700 rounded-lg overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+              >
                 {note.image !== "/" ? (
                   <img
                     src={note.image}
@@ -34,39 +62,52 @@ const NotesPage = () => {
                     className="h-32 object-contain transition-transform duration-500 group-hover:scale-110"
                   />
                 ) : (
-                  <div className="text-center">
+                  <motion.div
+                    className="text-center"
+                    animate={{ rotate: [0, 5, -5, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
                     <div className="text-6xl">📚</div>
                     <span className="text-gray-400">Coming Soon</span>
-                  </div>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
 
-              {/* Content */}
-              <h3 className="text-xl font-semibold text-center mt-4">
+              {/* Content with enhanced effects */}
+              <motion.h3
+                className="text-xl font-semibold text-center mt-4 bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent"
+                whileHover={{ scale: 1.05 }}
+              >
                 {note.title}
-              </h3>
+              </motion.h3>
 
               {note.pdfLink !== "/" ? (
-                <a
+                <motion.a
                   href={note.pdfLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block mt-4 mx-auto w-full max-w-[180px] px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg text-center transition-all duration-300 transform hover:scale-105"
+                  className="block mt-4 mx-auto w-full max-w-[180px] px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg text-center transition-all duration-300"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 5px 15px rgba(234, 179, 8, 0.4)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Download
-                </a>
+                </motion.a>
               ) : (
-                <button
+                <motion.button
                   className="block mt-4 mx-auto w-full max-w-[180px] px-5 py-2 bg-gray-600 text-gray-300 font-semibold rounded-lg text-center cursor-not-allowed"
                   disabled
+                  whileHover={{ opacity: 0.8 }}
                 >
                   Available Soon
-                </button>
+                </motion.button>
               )}
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
