@@ -59,7 +59,7 @@ const NotesPage = () => {
                   <img
                     src={note.image}
                     alt={note.title}
-                    className="h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+                    className="h-32 rounded-xl object-contain transition-transform duration-500 group-hover:scale-110"
                   />
                 ) : (
                   <motion.div

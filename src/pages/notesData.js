@@ -85,6 +85,16 @@ const notesData = [
     pdfLink: "https://www.dcpehvpm.org/E-Content/BCA/BCA-III/artificial_intelligence_tutorial.pdf"
   },
   {
+    title: "Mechatronics",
+    image: "https://tech-labs.com/sites/default/files/MechatronicsBlog.jpg",
+    pdfLink: "https://raw.githubusercontent.com/CoderSam049/notes/main/uploads/Mechatronics.pdf"
+  },
+  {
+    title: "Renewable Energy",
+    image: "https://elements.visualcapitalist.com/wp-content/uploads/2022/06/typess-of-renewable-energy.jpg",
+    pdfLink: "https://raw.githubusercontent.com/CoderSam049/notes/main/uploads/Renewable%20Energy%20and%20Technology%20vvi.pdf"
+  },
+  {
     title: "Other Coming Soon...",
     image: "/",
     pdfLink: "/",
