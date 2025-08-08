@@ -6,6 +6,14 @@ const notesData = [
     pdfLink:
       "https://raw.githubusercontent.com/CoderSam049/notes/main/uploads/1_to_6th_sem_syllabus%5B1%5D.pdf",
   },
+
+  {
+    title: "IOT Notes",
+    image:
+      "https://seecontrol.com/wp-content/uploads/2021/08/what-is-iot.jpeg",
+    pdfLink:
+      "https://raw.githubusercontent.com/CoderSam049/notes/main/uploads/iot.pdf",
+  },
   {
     title: "Python Notes",
     image:
