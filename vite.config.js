@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react'; // plugin-react lowercase mein hona chahiye
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()], // yeh lowercase mein hona chahiye
+  base: './', // 👈 This ensures relative paths for assets
+  plugins: [react()],
   server: {
-    port: 3001, // ya jo bhi port aap chahte hain
+    port: 3001,
   },
 });
